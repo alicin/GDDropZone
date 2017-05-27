@@ -15,13 +15,14 @@ protocol GDDropZoneDelegate {
     func dragDidDrop(dragInfo: NSDraggingInfo, dropZone: GDDropZone) -> Bool!
 }
 
-class GDDropZone: NSView {
+public class GDDropZone: NSView {
 
     var delegate: GDDropZoneDelegate!
     
     func registerDrag (forTypes types: [String]? = nil) {
         self.wantsLayer = true
         var types = types
+        
         if types == nil {
             types = [NSFilenamesPboardType, NSURLPboardType, NSStringPboardType, NSFilesPromisePboardType, NSPasteboardTypePNG, kUTTypeJPEG as String, kUTTypeGIF as String]
         }
@@ -39,29 +40,29 @@ class GDDropZone: NSView {
         self.registerDrag()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.registerDrag()
     }
     
-    override func draw(_ dirtyRect: NSRect) {
+    override public func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
     }
     
-    override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+    override public func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         self.delegate.dragDidEnter(dragInfo: sender, dropZone: self)
         return .copy
     }
     
-    override func draggingExited(_ sender: NSDraggingInfo?) {
+    override public func draggingExited(_ sender: NSDraggingInfo?) {
         self.delegate.dragDidExit(dragInfo: sender, dropZone: self)
     }
     
-    override func draggingEnded(_ sender: NSDraggingInfo?) {
+    override public func draggingEnded(_ sender: NSDraggingInfo?) {
         self.delegate.dragDidEnd(dragInfo: sender, dropZone: self)
     }
     
-    override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+    override public func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         return self.delegate.dragDidDrop(dragInfo: sender, dropZone: self)
     }
     
