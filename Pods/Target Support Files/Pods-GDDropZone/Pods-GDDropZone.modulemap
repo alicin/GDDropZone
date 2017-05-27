@@ -1,0 +1,6 @@
+framework module Pods_GDDropZone {
+  umbrella header "Pods-GDDropZone-umbrella.h"
+
+  export *
+  module * { export * }
+}

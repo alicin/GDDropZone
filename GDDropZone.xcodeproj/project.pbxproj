@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AF3C83EAA8AAD91A1622AAD /* Pods_GDDropZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98EE682D897E5DC31C1BF525 /* Pods_GDDropZone.framework */; };
 		5A25F4861EDA11D400764E63 /* GDDropZone.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A25F4841EDA11D400764E63 /* GDDropZone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A25F48E1EDA158300764E63 /* GDDropZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25F48D1EDA158300764E63 /* GDDropZone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CF1791DC62773584CFF9BB2 /* Pods-GDDropZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDDropZone.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDDropZone/Pods-GDDropZone.release.xcconfig"; sourceTree = "<group>"; };
 		5A25F4811EDA11D400764E63 /* GDDropZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDDropZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25F4841EDA11D400764E63 /* GDDropZone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDropZone.h; sourceTree = "<group>"; };
 		5A25F4851EDA11D400764E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A25F48D1EDA158300764E63 /* GDDropZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDDropZone.swift; sourceTree = "<group>"; };
+		98EE682D897E5DC31C1BF525 /* Pods_GDDropZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDDropZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C11ED6372EC2A6CB59AA9E /* Pods-GDDropZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDDropZone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDDropZone/Pods-GDDropZone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF3C83EAA8AAD91A1622AAD /* Pods_GDDropZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E19A38CC10AD7A447E9ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98EE682D897E5DC31C1BF525 /* Pods_GDDropZone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A25F4771EDA11D400764E63 = {
 			isa = PBXGroup;
 			children = (
 				5A25F4831EDA11D400764E63 /* GDDropZone */,
+				5A25F48C1EDA155A00764E63 /* Resources */,
 				5A25F4821EDA11D400764E63 /* Products */,
+				F3234319035F6E60726228AD /* Pods */,
+				05E19A38CC10AD7A447E9ADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +64,27 @@
 		5A25F4831EDA11D400764E63 /* GDDropZone */ = {
 			isa = PBXGroup;
 			children = (
+				5A25F48D1EDA158300764E63 /* GDDropZone.swift */,
 				5A25F4841EDA11D400764E63 /* GDDropZone.h */,
 				5A25F4851EDA11D400764E63 /* Info.plist */,
 			);
 			path = GDDropZone;
+			sourceTree = "<group>";
+		};
+		5A25F48C1EDA155A00764E63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F3234319035F6E60726228AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8C11ED6372EC2A6CB59AA9E /* Pods-GDDropZone.debug.xcconfig */,
+				2CF1791DC62773584CFF9BB2 /* Pods-GDDropZone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A25F4891EDA11D400764E63 /* Build configuration list for PBXNativeTarget "GDDropZone" */;
 			buildPhases = (
+				F2BF39BECD808A143B1B8C0B /* [CP] Check Pods Manifest.lock */,
 				5A25F47C1EDA11D400764E63 /* Sources */,
 				5A25F47D1EDA11D400764E63 /* Frameworks */,
 				5A25F47E1EDA11D400764E63 /* Headers */,
 				5A25F47F1EDA11D400764E63 /* Resources */,
+				E2F872FF19490C35EBA2262C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +133,7 @@
 					5A25F4801EDA11D400764E63 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RKX83LKFZP;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,11 +165,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E2F872FF19490C35EBA2262C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDDropZone/Pods-GDDropZone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2BF39BECD808A143B1B8C0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A25F47C1EDA11D400764E63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A25F48E1EDA158300764E63 /* GDDropZone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +310,9 @@
 		};
 		5A25F48A1EDA11D400764E63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C11ED6372EC2A6CB59AA9E /* Pods-GDDropZone.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -253,13 +327,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gDrop.com.tavsanlarAS.GDDropZone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		5A25F48B1EDA11D400764E63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF1791DC62773584CFF9BB2 /* Pods-GDDropZone.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -297,6 +374,7 @@
 				5A25F48B1EDA11D400764E63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
