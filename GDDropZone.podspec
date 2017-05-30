@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "GDDropZone"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.summary      = "Convenient drag and drop view."
     s.description  = "An NSView extension for convenient drag and drop operations."
     s.homepage     = "https://github.com/alicin/GDDropZone"
